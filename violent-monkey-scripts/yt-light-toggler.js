@@ -5,12 +5,12 @@
 // @match        *://*.youtube.com/*
 // @run-at       document-idle
 // @grant        GM_xmlhttpRequest
-// @connect      192.168.178.124
+// @connect      <your-local-hassio-ip>
 // ==/UserScript==
 
 (() => {
-    const WEBHOOK_ON  = 'http://0.0.0.0:8123/api/webhook/your-turn-on-lights-hook';
-    const WEBHOOK_OFF = 'http://0.0.0.0:8123/api/webhook/your-turn-off-lights-hook';
+    const WEBHOOK_ON  = 'http://<your-local-hassio-ip>:8123/api/webhook/your-turn-on-lights-hook';
+    const WEBHOOK_OFF = 'http://<your-local-hassio-ip>:8123/api/webhook/your-turn-off-lights-hook';
 
     let lastState = null;
 
